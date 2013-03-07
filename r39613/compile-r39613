@@ -1,0 +1,105 @@
+https://gist.github.com/takano32/5098310/
+
+
+load.c: In function 'loaded_feature_path':
+load.c:302:6: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+
+
+
+In file included from random.c:1363:0:
+siphash.c: In function 'ruby_sip_hash24':
+siphash.c:401:14: warning: unused variable 'm' [-Wunused-variable]
+
+
+
+rational.c: In function 'nurat_expt':
+rational.c:983:14: warning: suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]
+rational.c:978:5: warning: suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]
+
+
+re.c: In function 'rb_memsearch_ss':
+re.c:106:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+re.c: In function 'rb_memsearch':
+re.c:241:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+
+In file included from vm_exec.c:97:0,
+from vm.c:79:
+insns.def: In function 'vm_exec_core':
+insns.def:868:5: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+
+
+In file included from vm.c:79:0:
+vm_exec.c:60:12: warning: variable 'reg_pc' set but not used [-Wunused-but-set-variable]
+
+
+compiling date_core.c
+date_core.c: In function 'c_gregorian_leap_p':
+date_core.c:682:5: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+
+
+compiling date_parse.c
+date_parse.c: In function 'date_zone_to_diff':
+date_parse.c:528:3: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+date_parse.c:531:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+date_parse.c:534:4: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+
+compiling handle.c
+handle.c: In function 'dlhandle_sym':
+handle.c:314:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+
+compiling etc.c
+etc.c: In function 'passwd_iterate':
+etc.c:211:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+etc.c: In function 'etc_passwd':
+etc.c:258:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+etc.c: In function 'etc_getpwent':
+etc.c:340:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+etc.c: In function 'group_iterate':
+etc.c:458:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+etc.c: In function 'etc_group':
+etc.c:501:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+etc.c: In function 'etc_getgrent':
+etc.c:580:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+
+compiling ossl_ssl.c
+ossl_ssl.c: In function 'ossl_ssl_shutdown':
+ossl_ssl.c:1108:6: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+
+compiling ../.././ext/psych/yaml/api.c
+../.././ext/psych/yaml/api.c: In function 'yaml_document_delete':
+../.././ext/psych/yaml/api.c:1121:7: warning: variable 'context' set but not used [-Wunused-but-set-variable]
+compiling ../.././ext/psych/yaml/emitter.c
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_plain_scalar':
+../.././ext/psych/yaml/emitter.c:1931:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:1931:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_single_quoted_scalar':
+../.././ext/psych/yaml/emitter.c:1992:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:1992:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_literal_scalar':
+../.././ext/psych/yaml/emitter.c:2255:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:2255:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_folded_scalar':
+../.././ext/psych/yaml/emitter.c:2304:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:2304:18: warning: value computed is not used [-Wunused-value]
+
+compiling ../.././ext/psych/yaml/scanner.c
+../.././ext/psych/yaml/scanner.c: In function 'yaml_parser_decrease_flow_level':
+../.././ext/psych/yaml/scanner.c:1191:23: warning: variable 'dummy_key' set but not used [-Wunused-but-set-variable]
+
+compiling ../.././ext/psych/yaml/parser.c
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_block_sequence_entry':
+../.././ext/psych/yaml/parser.c:762:21: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_block_mapping_key':
+../.././ext/psych/yaml/parser.c:872:21: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_flow_sequence_entry':
+../.././ext/psych/yaml/parser.c:955:17: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_flow_mapping_key':
+../.././ext/psych/yaml/parser.c:1107:17: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+
+
+
