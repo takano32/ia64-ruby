@@ -1,0 +1,15 @@
+Index: test/thread/test_queue.rb
+===================================================================
+--- test/thread/test_queue.rb	(revision 39613)
++++ test/thread/test_queue.rb	(working copy)
+@@ -86,6 +86,10 @@
+     Dir.mktmpdir {|d|
+       timeout = 30
+       total_count = 2000
++      case RUBY_PLATFORM
++      when 'ia64-linux'
++        total_count = 200
++      end
+       begin
+         assert_normal_exit(<<-"_eom", bug5343, {:timeout => timeout, :chdir=>d})
+           require "thread"

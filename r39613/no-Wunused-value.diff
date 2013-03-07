@@ -1,0 +1,198 @@
+Index: ext/etc/etc.c
+===================================================================
+--- ext/etc/etc.c	(revision 39613)
++++ ext/etc/etc.c	(working copy)
+@@ -208,7 +208,7 @@
+     struct passwd *pw;
+ 
+     setpwent();
+-    while (pw = getpwent()) {
++    while ((pw = getpwent())) {
+ 	rb_yield(setup_passwd(pw));
+     }
+     return Qnil;
+@@ -255,7 +255,7 @@
+     if (rb_block_given_p()) {
+ 	each_passwd();
+     }
+-    else if (pw = getpwent()) {
++    else if ((pw = getpwent())) {
+ 	return setup_passwd(pw);
+     }
+ #endif
+@@ -337,7 +337,7 @@
+ #ifdef HAVE_GETPWENT
+     struct passwd *pw;
+ 
+-    if (pw = getpwent()) {
++    if ((pw = getpwent())) {
+ 	return setup_passwd(pw);
+     }
+ #endif
+@@ -455,7 +455,7 @@
+     struct group *pw;
+ 
+     setgrent();
+-    while (pw = getgrent()) {
++    while ((pw = getgrent())) {
+ 	rb_yield(setup_group(pw));
+     }
+     return Qnil;
+@@ -498,7 +498,7 @@
+     if (rb_block_given_p()) {
+ 	each_group();
+     }
+-    else if (grp = getgrent()) {
++    else if ((grp = getgrent())) {
+ 	return setup_group(grp);
+     }
+ #endif
+@@ -577,7 +577,7 @@
+ #ifdef HAVE_GETGRENT
+     struct group *gr;
+ 
+-    if (gr = getgrent()) {
++    if ((gr = getgrent())) {
+ 	return setup_group(gr);
+     }
+ #endif
+Index: ext/dl/handle.c
+===================================================================
+--- ext/dl/handle.c	(revision 39613)
++++ ext/dl/handle.c	(working copy)
+@@ -300,7 +300,7 @@
+ {
+ #if defined(HAVE_DLERROR)
+     const char *err;
+-# define CHECK_DLERROR if( err = dlerror() ){ func = 0; }
++# define CHECK_DLERROR if( (err = dlerror()) ){ func = 0; }
+ #else
+ # define CHECK_DLERROR
+ #endif
+Index: ext/date/date_parse.c
+===================================================================
+--- ext/date/date_parse.c	(revision 39613)
++++ ext/date/date_parse.c	(working copy)
+@@ -525,13 +525,13 @@
+ 
+ 		str = rb_str_new2(s);
+ 
+-		if (p = strchr(s, ':')) {
++		if ((p = strchr(s, ':'))) {
+ 		    hour = rb_str_new(s, p - s);
+ 		    s = ++p;
+-		    if (p = strchr(s, ':')) {
++		    if ((p = strchr(s, ':'))) {
+ 			min = rb_str_new(s, p - s);
+ 			s = ++p;
+-			if (p = strchr(s, ':')) {
++			if ((p = strchr(s, ':'))) {
+ 			    sec = rb_str_new(s, p - s);
+ 			}
+ 			else
+Index: ext/date/date_core.c
+===================================================================
+--- ext/date/date_core.c	(revision 39613)
++++ ext/date/date_core.c	(working copy)
+@@ -679,7 +679,7 @@
+ inline static int
+ c_gregorian_leap_p(int y)
+ {
+-    return MOD(y, 4) == 0 && y % 100 != 0 || MOD(y, 400) == 0;
++    return (MOD(y, 4) == 0 && y % 100 != 0) || MOD(y, 400) == 0;
+ }
+ 
+ static int
+Index: ext/openssl/ossl_ssl.c
+===================================================================
+--- ext/openssl/ossl_ssl.c	(revision 39613)
++++ ext/openssl/ossl_ssl.c	(working copy)
+@@ -1105,7 +1105,7 @@
+ 	     * Ignore the case SSL_shutdown returns -1. Empty handshake_func
+ 	     * must not happen.
+ 	     */
+-	    if (rc = SSL_shutdown(ssl))
++	    if ((rc = SSL_shutdown(ssl)))
+ 		break;
+ 	}
+ 	SSL_clear(ssl);
+Index: insns.def
+===================================================================
+--- insns.def	(revision 39613)
++++ insns.def	(working copy)
+@@ -866,7 +866,7 @@
+     }
+ 
+     EXEC_EVENT_HOOK(th, flag, GET_SELF(), 0, 0 /* id and klass are resolved at callee */,
+-		    (flag & RUBY_EVENT_RETURN | RUBY_EVENT_B_RETURN) ? TOPN(0) : Qundef);
++		    (flag & (RUBY_EVENT_RETURN | RUBY_EVENT_B_RETURN)) ? TOPN(0) : Qundef);
+ }
+ 
+ /**********************************************************/
+Index: load.c
+===================================================================
+--- load.c	(revision 39613)
++++ load.c	(working copy)
+@@ -297,8 +297,8 @@
+ 	    return 0;
+ 	plen = e - name - len - 1;
+     }
+-    if (type == 's' && !IS_DLEXT(&name[plen+len+1])
+-     || type == 'r' && !IS_RBEXT(&name[plen+len+1])
++    if ((type == 's' && !IS_DLEXT(&name[plen+len+1]))
++     || (type == 'r' && !IS_RBEXT(&name[plen+len+1]))
+      || name[plen] != '/') {
+        return 0;
+     }
+Index: re.c
+===================================================================
+--- re.c	(revision 39613)
++++ re.c	(working copy)
+@@ -103,7 +103,7 @@
+ {
+     const unsigned char *y;
+ 
+-    if (y = memmem(ys, n, xs, m))
++    if ((y = memmem(ys, n, xs, m)))
+ 	return y - ys;
+     else
+ 	return -1;
+@@ -238,7 +238,7 @@
+     else if (m == 1) {
+ 	const unsigned char *ys;
+ 
+-	if (ys = memchr(y, *x, n))
++	if ((ys = memchr(y, *x, n)))
+ 	    return ys - y;
+ 	else
+ 	    return -1;
+Index: rational.c
+===================================================================
+--- rational.c	(revision 39613)
++++ rational.c	(working copy)
+@@ -975,16 +975,19 @@
+     /* Deal with special cases of 0**n and 1**n */
+     if (k_numeric_p(other) && k_exact_p(other)) {
+ 	get_dat1(self);
+-	if (f_one_p(dat->den))
+-	    if (f_one_p(dat->num))
++	if (f_one_p(dat->den)) {
++	    if (f_one_p(dat->num)) {
+ 		return f_rational_new_bang1(CLASS_OF(self), ONE);
+-	    else if (f_minus_one_p(dat->num) && k_integer_p(other))
++	    } else if (f_minus_one_p(dat->num) && k_integer_p(other)) {
+ 		return f_rational_new_bang1(CLASS_OF(self), INT2FIX(f_odd_p(other) ? -1 : 1));
+-	    else if (f_zero_p(dat->num))
+-		if (FIX2INT(f_cmp(other, ZERO)) == -1)
++	    } else if (f_zero_p(dat->num)) {
++		if (FIX2INT(f_cmp(other, ZERO)) == -1) {
+ 		    rb_raise_zerodiv();
+-		else
++		} else {
+ 		    return f_rational_new_bang1(CLASS_OF(self), ZERO);
++		}
++	    }
++	}
+     }
+ 
+     /* General case */
