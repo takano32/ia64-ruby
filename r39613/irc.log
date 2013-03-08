@@ -1,0 +1,28 @@
+12:38 You have joined the channel
+12:38 Topic: Do you want to join #ruby-ja on IRCNet? | Tunneled to #ruby-ja on IRCNet. | Logs can be published, be careful on your words
+12:38 sora_h set the topic at: Dec 31, 2012 5:11 PM
+12:38 Mode: +cnt
+12:38 Created at: Jan 5, 2011 7:27 PM
+12:42 takano16: ちょっと、勝手に入れるにはデカイ diff なので相談したいな、と思ってきました。
+12:42 takano16: https://github.com/takano32/ia64-ruby/blob/master/r39613/remove_Wparentheses.diff
+12:42 takano16: コンパイル時の警告をなくすタイプの修正なんですが、大きく分けてふたつあって、
+12:43 takano16: 「if のなか、 = 演算は代入だから == かと思うじゃん、 = を意図してるなら () でくくって。」みたいな警告と
+12:43 takano16: 「 '||' と '&&' は優先順位付けするのに () 使ったほうがいいよ」という警告と
+12:44 takano16: 「ぶら下がり if よくわからんので、 {} 使ったほうがいい」っていう警告
+12:44 takano16: すみません、列挙してみたらみっつでした orz
+12:44 takano16: 後者ふたつについては diff いれていいかなって思うんですが、
+12:45 takano16: 最初のひとつめ、が微妙。コーディングスタイルとして自明な感じになっているところは () 付けない、ってなってるとしたらやめようと思ってます。
+12:45 sorah-bot: nurse: 警告消しはわりとさくっといれちゃってるなぁ
+12:45 sorah-bot: nurse: ただ、でかいとあれなので、何日かにかけてめだたないようにやってる（ぉぃ
+12:45 takano16: https://github.com/takano32/ia64-ruby/blob/master/r39613/remove_Wparentheses.diff#L72-92
+12:45 takano16: このあたり。
+12:46 takano16: なるほど。後者ふたつについてはサックリいれちゃいますね。
+12:46 takano16: 具体的にはこれは入れていいだろ、と。 https://github.com/takano32/ia64-ruby/blob/master/r39613/remove_Wparentheses.diff#L169-198
+12:47 takano16: もしかして入ってるサーバかチャンネルめいんじゃないのかな。 @sora_h ボットさんくす
+12:47 sorah-bot: nurse: 警告の種類ごとに別のコミットにしてくれた方がいい気はしないでもないかな
+12:47 takano16: なるせさん、どちらですか。 from freenode#ruby-ja
+12:47 sorah-bot: nurse: うささんだとファイルごとに別にしろっていうんだっけ
+12:47 sorah-bot: nurse: ircnetがメインです
+12:48 takano16: 了解す。三種類に分けますね、とりあえず。で、ぶら下がり if と || と && の優先順位付けはいれます。
+12:48 takano16: さんくすです！
+12:48 takano16: > ircnetがメイン
