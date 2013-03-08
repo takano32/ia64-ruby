@@ -1,0 +1,16 @@
+Index: load.c
+===================================================================
+--- load.c	(revision 39613)
++++ load.c	(working copy)
+@@ -297,8 +297,8 @@
+ 	    return 0;
+ 	plen = e - name - len - 1;
+     }
+-    if (type == 's' && !IS_DLEXT(&name[plen+len+1])
+-     || type == 'r' && !IS_RBEXT(&name[plen+len+1])
++    if ((type == 's' && !IS_DLEXT(&name[plen+len+1]))
++     || (type == 'r' && !IS_RBEXT(&name[plen+len+1]))
+      || name[plen] != '/') {
+        return 0;
+     }
+

@@ -1,0 +1,13 @@
+Index: insns.def
+===================================================================
+--- insns.def	(revision 39613)
++++ insns.def	(working copy)
+@@ -866,7 +866,7 @@
+     }
+ 
+     EXEC_EVENT_HOOK(th, flag, GET_SELF(), 0, 0 /* id and klass are resolved at callee */,
+-		    (flag & RUBY_EVENT_RETURN | RUBY_EVENT_B_RETURN) ? TOPN(0) : Qundef);
++		    (flag & (RUBY_EVENT_RETURN | RUBY_EVENT_B_RETURN)) ? TOPN(0) : Qundef);
+ }
+ 
+ /**********************************************************/

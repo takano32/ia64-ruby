@@ -1,0 +1,14 @@
+Index: ext/date/date_core.c
+===================================================================
+--- ext/date/date_core.c	(revision 39613)
++++ ext/date/date_core.c	(working copy)
+@@ -679,7 +679,7 @@
+ inline static int
+ c_gregorian_leap_p(int y)
+ {
+-    return MOD(y, 4) == 0 && y % 100 != 0 || MOD(y, 400) == 0;
++    return (MOD(y, 4) == 0 && y % 100 != 0) || MOD(y, 400) == 0;
+ }
+ 
+ static int
+
