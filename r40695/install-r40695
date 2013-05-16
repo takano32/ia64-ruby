@@ -1,0 +1,382 @@
+Script started on Mon May 13 15:48:29 2013
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O0 -fno-fast-math -ggdb -g3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Werror=pointer-arith -Werror=write-strings -Werror=declaration-after-statement -Werror=implicit-function-declaration -ansi -std=iso9899:199409 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT -fPIE
+	CPPFLAGS =   -I. -I.ext/include/ia64-linux -I./include -I.
+	DLDFLAGS = -pie  
+	SOLIBS = 
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/ia64-linux-gnu/4.6/lto-wrapper
+Target: ia64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 4.6.3-15' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libssp --enable-plugin --enable-objc-gc --with-system-libunwind --enable-checking=release --build=ia64-linux-gnu --host=ia64-linux-gnu --target=ia64-linux-gnu
+Thread model: posix
+gcc version 4.6.3 (Debian 4.6.3-15) 
+generating enc.mk
+generating encdb.h
+encdb.h unchanged
+making enc
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[1]: Nothing to be done for `enc'.
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+making srcs under enc
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[1]: Nothing to be done for `srcs'.
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+generating transdb.h
+transdb.h unchanged
+making trans
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[1]: Nothing to be done for `./enc/trans'.
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+making encs
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+generating makefile exts.mk
+Failed to configure -test-/win32/dln. It will not be installed.
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+Failed to configure curses. It will not be installed.
+Failed to configure dbm. It will not be installed.
+Failed to configure dl/win32. It will not be installed.
+Failed to configure fiddle. It will not be installed.
+Failed to configure fiddle/win32. It will not be installed.
+Failed to configure gdbm. It will not be installed.
+Failed to configure readline. It will not be installed.
+Failed to configure tk. It will not be installed.
+Failed to configure tk/tkutil. It will not be installed.
+Failed to configure win32ole. It will not be installed.
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/array/resize'
+linking shared-object -test-/array/resize.so
+installing default resize libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/array/resize'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bignum'
+linking shared-object -test-/bignum.so
+installing default bignum libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bignum'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-3571'
+linking shared-object -test-/bug-3571/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-3571'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-3662'
+linking shared-object -test-/bug-3662/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-3662'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-5832'
+linking shared-object -test-/bug-5832/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-5832'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/debug'
+linking shared-object -test-/debug.so
+installing default debug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/debug'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/exception'
+linking shared-object -test-/exception.so
+installing default exception libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/exception'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/fatal'
+linking shared-object -test-/fatal/rb_fatal.so
+installing default rb_fatal libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/fatal'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/funcall'
+linking shared-object -test-/funcall/funcall.so
+installing default funcall libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/funcall'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/iter'
+linking shared-object -test-/iter/break.so
+installing default break libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/iter'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/load/dot.dot'
+linking shared-object -test-/load/dot.dot/dot.dot.so
+installing default dot.dot libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/load/dot.dot'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/marshal/compat'
+linking shared-object -test-/marshal/compat.so
+installing default compat libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/marshal/compat'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/marshal/usr'
+linking shared-object -test-/marshal/usr.so
+installing default usr libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/marshal/usr'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/method'
+linking shared-object -test-/method.so
+installing default method libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/method'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/num2int'
+linking shared-object -test-/num2int/num2int.so
+installing default num2int libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/num2int'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/old_thread_select'
+linking shared-object -test-/old_thread_select/old_thread_select.so
+installing default old_thread_select libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/old_thread_select'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/path_to_class'
+linking shared-object -test-/path_to_class/path_to_class.so
+installing default path_to_class libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/path_to_class'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/printf'
+linking shared-object -test-/printf.so
+installing default printf libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/printf'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/st/numhash'
+linking shared-object -test-/st/numhash.so
+installing default numhash libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/st/numhash'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/st/update'
+linking shared-object -test-/st/update.so
+installing default update libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/st/update'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/string'
+linking shared-object -test-/string/string.so
+installing default string libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/string'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/symbol'
+linking shared-object -test-/symbol/symbol.so
+installing default symbol libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/symbol'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/typeddata'
+linking shared-object -test-/typeddata/typeddata.so
+installing default typeddata libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/typeddata'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/wait_for_single_fd'
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.so
+installing default wait_for_single_fd libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/wait_for_single_fd'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/win32/dln'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/win32/dln'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/win32/fd_setsize'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/win32/fd_setsize'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/bigdecimal'
+linking shared-object bigdecimal.so
+installing default bigdecimal libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/bigdecimal'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/continuation'
+linking shared-object continuation.so
+installing default continuation libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/continuation'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/coverage'
+linking shared-object coverage.so
+installing default coverage libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/coverage'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/curses'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/curses'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/date'
+linking shared-object date_core.so
+installing default date_core libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/date'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dbm'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest'
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/bubblebabble'
+linking shared-object digest/bubblebabble.so
+installing default bubblebabble libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/bubblebabble'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/md5'
+linking shared-object digest/md5.so
+installing default md5 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/md5'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/rmd160'
+linking shared-object digest/rmd160.so
+installing default rmd160 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/rmd160'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/sha1'
+linking shared-object digest/sha1.so
+installing default sha1 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/sha1'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/sha2'
+linking shared-object digest/sha2.so
+installing default sha2 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/sha2'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl'
+linking shared-object dl.so
+installing dl libraries
+installing default dl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl/callback'
+linking shared-object dl/callback.so
+installing default callback libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl/callback'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl/win32'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/etc'
+linking shared-object etc.so
+installing default etc libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/etc'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fcntl'
+linking shared-object fcntl.so
+installing default fcntl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fcntl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiber'
+linking shared-object fiber.so
+installing default fiber libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiber'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiddle'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiddle'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiddle/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiddle/win32'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/gdbm'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/gdbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/console'
+linking shared-object io/console.so
+installing default console libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/console'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/nonblock'
+linking shared-object io/nonblock.so
+installing default nonblock libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/nonblock'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/wait'
+linking shared-object io/wait.so
+installing default wait libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/wait'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json'
+installing default libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json/generator'
+linking shared-object json/ext/generator.so
+installing default generator libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json/generator'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json/parser'
+linking shared-object json/ext/parser.so
+installing default parser libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json/parser'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/mathn/complex'
+linking shared-object mathn/complex.so
+installing default complex libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/mathn/complex'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/mathn/rational'
+linking shared-object mathn/rational.so
+installing default rational libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/mathn/rational'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/nkf'
+linking shared-object nkf.so
+installing default nkf libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/nkf'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/objspace'
+linking shared-object objspace.so
+installing default objspace libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/objspace'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/openssl'
+linking shared-object openssl.so
+installing default openssl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/openssl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/pathname'
+linking shared-object pathname.so
+installing default pathname libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/pathname'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/psych'
+linking shared-object psych.so
+installing default psych libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/psych'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/pty'
+linking shared-object pty.so
+installing default pty libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/pty'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/racc/cparse'
+linking shared-object racc/cparse.so
+installing default cparse libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/racc/cparse'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/readline'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/readline'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/ripper'
+linking shared-object ripper.so
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/ripper'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/sdbm'
+linking shared-object sdbm.so
+installing default sdbm libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/sdbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/socket'
+linking shared-object socket.so
+installing default socket libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/socket'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/stringio'
+linking shared-object stringio.so
+installing default stringio libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/stringio'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/strscan'
+linking shared-object strscan.so
+installing default strscan libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/strscan'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/syslog'
+linking shared-object syslog.so
+installing default syslog libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/syslog'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/tk'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/tk'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/tk/tkutil'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/tk/tkutil'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/win32ole'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/win32ole'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/zlib'
+linking shared-object zlib.so
+installing default zlib libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/zlib'
+make[2]: Entering directory `/home/takano32/workspace/ruby'
+make[2]: `ruby' is up to date.
+make[2]: Leaving directory `/home/takano32/workspace/ruby'
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+Generating RDoc documentation
+
+No newer files.
+
+Files:      0
+
+Classes:    0 (0 undocumented)
+Modules:    0 (0 undocumented)
+Constants:  0 (0 undocumented)
+Attributes: 0 (0 undocumented)
+Methods:    0 (0 undocumented)
+
+Total:      0 (0 undocumented)
+  0.00% documented
+
+Elapsed: 0.0s
+./miniruby -I./lib -I. -I.ext/common  ./tool/rbinstall.rb --make="make" --dest-dir="" --extout=".ext" --mflags="" --make-flags="" --data-mode=0644 --prog-mode=0755 --installed-list .installed.list --mantype="doc" --install=all --rdoc-output=".ext/rdoc"
+installing binary commands:   /home/takano32/local/stow/ruby-r40695/bin
+installing base libraries:    /home/takano32/local/stow/ruby-r40695/lib
+installing arch files:        /home/takano32/local/stow/ruby-r40695/lib/ruby/2.1.0/ia64-linux
+installing pkgconfig data:    /home/takano32/local/stow/ruby-r40695/lib/pkgconfig
+installing extension objects: /home/takano32/local/stow/ruby-r40695/lib/ruby/2.1.0/ia64-linux
+installing extension objects: /home/takano32/local/stow/ruby-r40695/lib/ruby/site_ruby/2.1.0/ia64-linux
+installing extension objects: /home/takano32/local/stow/ruby-r40695/lib/ruby/vendor_ruby/2.1.0/ia64-linux
+installing extension headers: /home/takano32/local/stow/ruby-r40695/include/ruby-2.1.0/ia64-linux
+installing extension scripts: /home/takano32/local/stow/ruby-r40695/lib/ruby/2.1.0
+installing extension scripts: /home/takano32/local/stow/ruby-r40695/lib/ruby/site_ruby/2.1.0
+installing extension scripts: /home/takano32/local/stow/ruby-r40695/lib/ruby/vendor_ruby/2.1.0
+installing extension headers: /home/takano32/local/stow/ruby-r40695/include/ruby-2.1.0/ruby
+installing rdoc:              /home/takano32/local/stow/ruby-r40695/share/ri/2.1.0/system
+installing capi-docs:         /home/takano32/local/stow/ruby-r40695/share/doc/ruby
+installing command scripts:   /home/takano32/local/stow/ruby-r40695/bin
+installing library scripts:   /home/takano32/local/stow/ruby-r40695/lib/ruby/2.1.0
+installing common headers:    /home/takano32/local/stow/ruby-r40695/include/ruby-2.1.0
+installing manpages:          /home/takano32/local/stow/ruby-r40695/share/man/man1
+installing default gems:      /home/takano32/local/stow/ruby-r40695/lib/ruby/gems/2.1.0 (build_info, cache, doc, gems, specifications)
+                              bigdecimal 1.2.0
+                              io-console 0.4.2
+                              json 1.7.7
+                              minitest 4.7.4
+                              psych 2.0.0
+                              rake 0.9.6
+                              rdoc 4.0.0
+                              test-unit 2.1.0.0
+
+Script done on Mon May 13 15:49:08 2013
