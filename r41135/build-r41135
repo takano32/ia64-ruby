@@ -1,0 +1,1197 @@
+Script started on Fri Jun  7 08:50:44 2013
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O0 -fno-fast-math -ggdb -g3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Werror=pointer-arith -Werror=write-strings -Werror=declaration-after-statement -Werror=implicit-function-declaration -ansi -std=iso9899:199409 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT -fPIE
+	CPPFLAGS =   -I. -I.ext/include/ia64-linux -I./include -I.
+	DLDFLAGS = -pie  
+	SOLIBS = 
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/ia64-linux-gnu/4.6/lto-wrapper
+Target: ia64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 4.6.4-2' --with-bugurl=file:///usr/share/doc/gcc-4.6/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.6 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.6 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libssp --enable-plugin --enable-objc-gc --with-system-libunwind --enable-checking=release --build=ia64-linux-gnu --host=ia64-linux-gnu --target=ia64-linux-gnu
+Thread model: posix
+gcc version 4.6.4 (Debian 4.6.4-2) 
+compiling main.c
+compiling dmydln.c
+compiling dmyencoding.c
+compiling dmyloadpath.c
+compiling miniprelude.c
+compiling array.c
+compiling bignum.c
+compiling class.c
+compiling compar.c
+compiling complex.c
+compiling dir.c
+compiling dln_find.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling load.c
+compiling proc.c
+compiling file.c
+compiling gc.c
+compiling hash.c
+compiling inits.c
+compiling io.c
+compiling marshal.c
+compiling math.c
+compiling node.c
+compiling numeric.c
+compiling object.c
+compiling pack.c
+generating parse.c
+compiling parse.c
+compiling process.c
+compiling random.c
+In file included from random.c:1356:0:
+siphash.c: In function 'ruby_sip_hash24':
+siphash.c:401:14: warning: unused variable 'm' [-Wunused-variable]
+compiling range.c
+compiling rational.c
+compiling re.c
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+compiling struct.c
+compiling time.c
+compiling transcode.c
+compiling util.c
+compiling variable.c
+compiling version.c
+compiling compile.c
+compiling debug.c
+compiling iseq.c
+compiling vm.c
+In file included from vm.c:77:0:
+vm_exec.c: In function 'vm_exec_core':
+vm_exec.c:60:12: warning: variable 'reg_pc' set but not used [-Wunused-but-set-variable]
+compiling vm_dump.c
+compiling vm_backtrace.c
+compiling vm_trace.c
+compiling thread.c
+compiling cont.c
+compiling ./enc/ascii.c
+compiling ./enc/us_ascii.c
+compiling ./enc/unicode.c
+compiling ./enc/utf_8.c
+generating newline.c ...
+converter for universal_newline
+converter for crlf_newline
+converter for cr_newline
+done.  (0.08user 0.01system 0.02elapsed)
+compiling newline.c
+compiling ./missing/strlcpy.c
+compiling ./missing/strlcat.c
+compiling ./missing/setproctitle.c
+gcc -O0 -fno-fast-math -ggdb -g3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Werror=pointer-arith -Werror=write-strings -Werror=declaration-after-statement -Werror=implicit-function-declaration -ansi -std=iso9899:199409  -c ia64.s
+compiling addr2line.c
+linking miniruby
+rbconfig.rb updated
+generating enc.mk
+compiling dln.c
+compiling encoding.c
+creating verconf.h
+compiling loadpath.c
+generating prelude.c
+compiling prelude.c
+linking static-library libruby-static.a
+verifying static-library libruby-static.a
+generating encdb.h
+encdb.h updated
+making enc
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+compiling ./enc/encdb.c
+linking encoding encdb.so
+compiling ./enc/big5.c
+linking encoding big5.so
+compiling ./enc/cp949.c
+linking encoding cp949.so
+compiling ./enc/emacs_mule.c
+linking encoding emacs_mule.so
+compiling ./enc/euc_jp.c
+linking encoding euc_jp.so
+compiling ./enc/euc_kr.c
+linking encoding euc_kr.so
+compiling ./enc/euc_tw.c
+linking encoding euc_tw.so
+compiling ./enc/gb2312.c
+linking encoding gb2312.so
+compiling ./enc/gb18030.c
+linking encoding gb18030.so
+compiling ./enc/gbk.c
+linking encoding gbk.so
+compiling ./enc/iso_8859_1.c
+linking encoding iso_8859_1.so
+compiling ./enc/iso_8859_2.c
+linking encoding iso_8859_2.so
+compiling ./enc/iso_8859_3.c
+linking encoding iso_8859_3.so
+compiling ./enc/iso_8859_4.c
+linking encoding iso_8859_4.so
+compiling ./enc/iso_8859_5.c
+linking encoding iso_8859_5.so
+compiling ./enc/iso_8859_6.c
+linking encoding iso_8859_6.so
+compiling ./enc/iso_8859_7.c
+linking encoding iso_8859_7.so
+compiling ./enc/iso_8859_8.c
+linking encoding iso_8859_8.so
+compiling ./enc/iso_8859_9.c
+linking encoding iso_8859_9.so
+compiling ./enc/iso_8859_10.c
+linking encoding iso_8859_10.so
+compiling ./enc/iso_8859_11.c
+linking encoding iso_8859_11.so
+compiling ./enc/iso_8859_13.c
+linking encoding iso_8859_13.so
+compiling ./enc/iso_8859_14.c
+linking encoding iso_8859_14.so
+compiling ./enc/iso_8859_15.c
+linking encoding iso_8859_15.so
+compiling ./enc/iso_8859_16.c
+linking encoding iso_8859_16.so
+compiling ./enc/koi8_r.c
+linking encoding koi8_r.so
+compiling ./enc/koi8_u.c
+linking encoding koi8_u.so
+compiling ./enc/shift_jis.c
+linking encoding shift_jis.so
+compiling ./enc/utf_16be.c
+linking encoding utf_16be.so
+compiling ./enc/utf_16le.c
+linking encoding utf_16le.so
+compiling ./enc/utf_32be.c
+linking encoding utf_32be.so
+compiling ./enc/utf_32le.c
+linking encoding utf_32le.so
+compiling ./enc/windows_31j.c
+linking encoding windows_31j.so
+compiling ./enc/windows_1251.c
+linking encoding windows_1251.so
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+making srcs under enc
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+generating table from enc/trans/big5.c
+generating enc/trans/big5.c ...
+converter from Big5 to UTF-8
+converter from UTF-8 to Big5
+converter from CP950 to UTF-8
+converter from UTF-8 to CP950
+converter from Big5-HKSCS to UTF-8
+converter from UTF-8 to Big5-HKSCS
+converter from CP951 to UTF-8
+converter from UTF-8 to CP951
+converter from Big5-UAO to UTF-8
+converter from UTF-8 to Big5-UAO
+done.  (61.81user 0.11system 61.84elapsed)
+generating table from enc/trans/chinese.c
+generating enc/trans/chinese.c ...
+load mapsrc enc/trans/GB/GB2312%UCS.src
+converter from GB2312 to UTF-8
+load mapsrc enc/trans/GB/GB12345%UCS.src
+converter from GB12345 to UTF-8
+load mapsrc enc/trans/GB/UCS%GB2312.src
+converter from UTF-8 to GB2312
+load mapsrc enc/trans/GB/UCS%GB12345.src
+converter from UTF-8 to GB12345
+done.  (11.86user 0.03system 11.73elapsed)
+generating table from enc/trans/emoji.c
+generating enc/trans/emoji.c ...
+converter from UTF8-DoCoMo to UTF8-KDDI
+converter from UTF8-DoCoMo to UTF8-SoftBank
+converter from UTF8-DoCoMo to UTF-8
+converter from UTF8-KDDI to UTF8-DoCoMo
+converter from UTF8-KDDI to UTF8-SoftBank
+converter from UTF8-KDDI to UTF-8
+converter from UTF8-SoftBank to UTF8-DoCoMo
+converter from UTF8-SoftBank to UTF8-KDDI
+converter from UTF8-SoftBank to UTF-8
+converter from UTF-8 to UTF8-DoCoMo
+converter from UTF-8 to UTF8-KDDI
+converter from UTF-8 to UTF8-SoftBank
+done.  (3.49user 0.01system 3.29elapsed)
+generating table from enc/trans/emoji_iso2022_kddi.c
+generating enc/trans/emoji_iso2022_kddi.c ...
+converter for iso2022jp_kddi_decoder
+converter for iso2022jp_kddi_decoder_jisx0208_rest
+converter for iso2022jp_kddi_encoder
+load mapsrc enc/trans/EMOJI/EMOJI_ISO-2022-JP-KDDI%UCS.src
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@IBM%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+converter from stateless-ISO-2022-JP-KDDI to UTF8-KDDI
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_ISO-2022-JP-KDDI.src
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_ISO-2022-JP-KDDI-UNDOC.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@IBM.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+converter from UTF8-KDDI to stateless-ISO-2022-JP-KDDI
+done.  (7.15user 0.02system 7.01elapsed)
+generating table from enc/trans/emoji_sjis_docomo.c
+generating enc/trans/emoji_sjis_docomo.c ...
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/EMOJI/EMOJI_SHIFT_JIS-DOCOMO%UCS.src
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@IBM%UCS.src
+load mapsrc enc/trans/CP/CP932UDA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+converter from SJIS-DOCOMO to UTF8-DOCOMO
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_SHIFT_JIS-DOCOMO.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@IBM.src
+load mapsrc enc/trans/CP/UCS%CP932UDA.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+converter from UTF8-DOCOMO to SJIS-DOCOMO
+done.  (8.07user 0.02system 7.91elapsed)
+generating table from enc/trans/emoji_sjis_kddi.c
+generating enc/trans/emoji_sjis_kddi.c ...
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/EMOJI/EMOJI_SHIFT_JIS-KDDI%UCS.src
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@IBM%UCS.src
+load mapsrc enc/trans/CP/CP932UDA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+converter from SJIS-KDDI to UTF8-KDDI
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_SHIFT_JIS-KDDI.src
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_SHIFT_JIS-KDDI-UNDOC.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@IBM.src
+load mapsrc enc/trans/CP/UCS%CP932UDA.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+converter from UTF8-KDDI to SJIS-KDDI
+done.  (8.34user 0.04system 8.18elapsed)
+generating table from enc/trans/emoji_sjis_softbank.c
+generating enc/trans/emoji_sjis_softbank.c ...
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/EMOJI/EMOJI_SHIFT_JIS-SOFTBANK%UCS.src
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@IBM%UCS.src
+load mapsrc enc/trans/CP/CP932UDA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+converter from SJIS-SoftBank to UTF8-SoftBank
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/EMOJI/UCS%EMOJI_SHIFT_JIS-SOFTBANK.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@IBM.src
+load mapsrc enc/trans/CP/UCS%CP932UDA.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+converter from UTF8-SoftBank to SJIS-SoftBank
+done.  (8.00user 0.01system 7.81elapsed)
+generating table from enc/trans/escape.c
+generating enc/trans/escape.c ...
+converter for amp_escape
+converter for xml_text_escape
+converter for xml_attr_content_escape
+converter for escape_xml_attr_quote
+done.  (0.28user 0.00system 0.06elapsed)
+generating table from enc/trans/gb18030.c
+generating enc/trans/gb18030.c ...
+converter from GB18030 to UTF-8
+converter from UTF-8 to GB18030
+done.  (499.64user 0.10system 499.70elapsed)
+generating table from enc/trans/gbk.c
+generating enc/trans/gbk.c ...
+converter from GBK to UTF-8
+converter from UTF-8 to GBK
+done.  (13.48user 0.02system 13.31elapsed)
+generating table from enc/trans/iso2022.c
+generating enc/trans/iso2022.c ...
+converter for iso2022jp_decoder
+converter for iso2022jp_decoder_jisx0208_rest
+converter for iso2022jp_encoder
+converter for stateless_iso2022jp_to_eucjp
+converter for eucjp_to_stateless_iso2022jp
+converter for cp50221_decoder
+converter for cp50221_encoder
+done.  (0.40user 0.00system 0.19elapsed)
+generating table from enc/trans/japanese.c
+generating enc/trans/japanese.c ...
+converter for eucjp2sjis
+converter for sjis2eucjp
+done.  (0.28user 0.01system 0.07elapsed)
+generating table from enc/trans/japanese_euc.c
+generating enc/trans/japanese_euc.c ...
+load mapsrc enc/trans/JIS/JISX0208@1990%UCS.src
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/JIS/JISX0212%UCS.src
+converter from EUC-JP to UTF-8
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/JIS/JISX0208UDC%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/JIS/JISX0212VDC@IBM%UCS.src
+load mapsrc enc/trans/JIS/JISX0212UDC%UCS.src
+load mapsrc enc/trans/JIS/JISX0212@MS%UCS.src
+converter from eucJP-ms to UTF-8
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+converter from CP51932 to UTF-8
+load mapsrc enc/trans/JIS/JISX0208@1990%UCS.src
+load mapsrc enc/trans/JIS/JISX0213-1%UCS@BMP.src
+load mapsrc enc/trans/JIS/JISX0213-1%UCS@SIP.src
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/JIS/JISX0213-2%UCS@BMP.src
+load mapsrc enc/trans/JIS/JISX0213-2%UCS@SIP.src
+converter from EUC-JIS-2004 to UTF-8
+load mapsrc enc/trans/JIS/UCS%JISX0208@1990.src
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/JIS/UCS%JISX0212.src
+converter from UTF-8 to EUC-JP
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/JIS/UCS%JISX0208UDC.src
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/JIS/UCS%JISX0212VDC@IBM.src
+load mapsrc enc/trans/JIS/UCS%JISX0212UDC.src
+load mapsrc enc/trans/JIS/UCS%JISX0212@MS.src
+converter from UTF-8 to eucJP-ms
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+converter from UTF-8 to CP51932
+load mapsrc enc/trans/JIS/UCS%JISX0208@1990.src
+load mapsrc enc/trans/JIS/UCS@BMP%JISX0213-1.src
+load mapsrc enc/trans/JIS/UCS@SIP%JISX0213-1.src
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/JIS/UCS@BMP%JISX0213-2.src
+load mapsrc enc/trans/JIS/UCS@SIP%JISX0213-2.src
+converter from UTF-8 to EUC-JIS-2004
+done.  (33.44user 0.04system 33.40elapsed)
+generating table from enc/trans/japanese_sjis.c
+generating enc/trans/japanese_sjis.c ...
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@1990%UCS.src
+converter from Shift_JIS to UTF-8
+load mapsrc enc/trans/JIS/JISX0201-KANA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208VDC@NEC%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@NEC_IBM%UCS.src
+load mapsrc enc/trans/CP/CP932VDC@IBM%UCS.src
+load mapsrc enc/trans/CP/CP932UDA%UCS.src
+load mapsrc enc/trans/JIS/JISX0208@MS%UCS.src
+converter from Windows-31J to UTF-8
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@1990.src
+converter from UTF-8 to Shift_JIS
+load mapsrc enc/trans/JIS/UCS%JISX0201-KANA.src
+load mapsrc enc/trans/JIS/UCS%JISX0208@MS.src
+load mapsrc enc/trans/JIS/UCS%JISX0208VDC@NEC.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@IBM.src
+load mapsrc enc/trans/CP/UCS%CP932VDC@NEC_IBM.src
+load mapsrc enc/trans/CP/UCS%CP932UDA.src
+converter from UTF-8 to Windows-31J
+done.  (12.32user 0.04system 12.16elapsed)
+generating table from enc/trans/korean.c
+generating enc/trans/korean.c ...
+converter from UTF-8 to EUC-KR
+converter from EUC-KR to UTF-8
+converter from UTF-8 to CP949
+converter from CP949 to UTF-8
+done.  (17.21user 0.03system 17.06elapsed)
+generating table from enc/trans/single_byte.c
+generating enc/trans/single_byte.c ...
+converter from US-ASCII to UTF-8
+converter from UTF-8 to US-ASCII
+converter from ASCII-8BIT to UTF-8
+converter from UTF-8 to ASCII-8BIT
+converter from ISO-8859-1 to UTF-8
+converter from UTF-8 to ISO-8859-1
+converter from ISO-8859-2 to UTF-8
+converter from UTF-8 to ISO-8859-2
+converter from ISO-8859-3 to UTF-8
+converter from UTF-8 to ISO-8859-3
+converter from ISO-8859-4 to UTF-8
+converter from UTF-8 to ISO-8859-4
+converter from ISO-8859-5 to UTF-8
+converter from UTF-8 to ISO-8859-5
+converter from ISO-8859-6 to UTF-8
+converter from UTF-8 to ISO-8859-6
+converter from ISO-8859-7 to UTF-8
+converter from UTF-8 to ISO-8859-7
+converter from ISO-8859-8 to UTF-8
+converter from UTF-8 to ISO-8859-8
+converter from ISO-8859-9 to UTF-8
+converter from UTF-8 to ISO-8859-9
+converter from ISO-8859-10 to UTF-8
+converter from UTF-8 to ISO-8859-10
+converter from ISO-8859-11 to UTF-8
+converter from UTF-8 to ISO-8859-11
+converter from ISO-8859-13 to UTF-8
+converter from UTF-8 to ISO-8859-13
+converter from ISO-8859-14 to UTF-8
+converter from UTF-8 to ISO-8859-14
+converter from ISO-8859-15 to UTF-8
+converter from UTF-8 to ISO-8859-15
+converter from ISO-8859-16 to UTF-8
+converter from UTF-8 to ISO-8859-16
+converter from WINDOWS-874 to UTF-8
+converter from UTF-8 to WINDOWS-874
+converter from WINDOWS-1250 to UTF-8
+converter from UTF-8 to WINDOWS-1250
+converter from WINDOWS-1251 to UTF-8
+converter from UTF-8 to WINDOWS-1251
+converter from WINDOWS-1252 to UTF-8
+converter from UTF-8 to WINDOWS-1252
+converter from WINDOWS-1253 to UTF-8
+converter from UTF-8 to WINDOWS-1253
+converter from WINDOWS-1254 to UTF-8
+converter from UTF-8 to WINDOWS-1254
+converter from WINDOWS-1255 to UTF-8
+converter from UTF-8 to WINDOWS-1255
+converter from WINDOWS-1256 to UTF-8
+converter from UTF-8 to WINDOWS-1256
+converter from WINDOWS-1257 to UTF-8
+converter from UTF-8 to WINDOWS-1257
+converter from IBM437 to UTF-8
+converter from UTF-8 to IBM437
+converter from IBM775 to UTF-8
+converter from UTF-8 to IBM775
+converter from IBM737 to UTF-8
+converter from UTF-8 to IBM737
+converter from IBM852 to UTF-8
+converter from UTF-8 to IBM852
+converter from IBM855 to UTF-8
+converter from UTF-8 to IBM855
+converter from IBM857 to UTF-8
+converter from UTF-8 to IBM857
+converter from IBM860 to UTF-8
+converter from UTF-8 to IBM860
+converter from IBM861 to UTF-8
+converter from UTF-8 to IBM861
+converter from IBM862 to UTF-8
+converter from UTF-8 to IBM862
+converter from IBM863 to UTF-8
+converter from UTF-8 to IBM863
+converter from IBM865 to UTF-8
+converter from UTF-8 to IBM865
+converter from IBM866 to UTF-8
+converter from UTF-8 to IBM866
+converter from IBM869 to UTF-8
+converter from UTF-8 to IBM869
+converter from MACCROATIAN to UTF-8
+converter from UTF-8 to MACCROATIAN
+converter from MACCYRILLIC to UTF-8
+converter from UTF-8 to MACCYRILLIC
+converter from MACGREEK to UTF-8
+converter from UTF-8 to MACGREEK
+converter from MACICELAND to UTF-8
+converter from UTF-8 to MACICELAND
+converter from MACROMAN to UTF-8
+converter from UTF-8 to MACROMAN
+converter from MACROMANIA to UTF-8
+converter from UTF-8 to MACROMANIA
+converter from MACTURKISH to UTF-8
+converter from UTF-8 to MACTURKISH
+converter from MACUKRAINE to UTF-8
+converter from UTF-8 to MACUKRAINE
+converter from KOI8-U to UTF-8
+converter from UTF-8 to KOI8-U
+converter from KOI8-R to UTF-8
+converter from UTF-8 to KOI8-R
+converter from TIS-620 to UTF-8
+converter from UTF-8 to TIS-620
+converter from CP850 to UTF-8
+converter from UTF-8 to CP850
+converter from CP852 to UTF-8
+converter from UTF-8 to CP852
+converter from CP855 to UTF-8
+converter from UTF-8 to CP855
+done.  (6.07user 0.04system 6.05elapsed)
+generating table from enc/trans/utf8_mac.c
+generating enc/trans/utf8_mac.c ...
+converter from UTF-8 to UTF8-MAC
+converter for from_UTF8_MAC
+converter for from_utf8_mac_nfc3
+converter for from_utf8_mac_nfc2
+done.  (2.90user 0.02system 2.70elapsed)
+generating table from enc/trans/utf_16_32.c
+generating enc/trans/utf_16_32.c ...
+converter for from_UTF_16LE
+converter for from_UTF_32LE
+converter for from_UTF_16BE
+converter for from_UTF_32BE
+converter for from_UTF_16
+converter for from_UTF_32
+converter for from_UTF_8
+done.  (0.47user 0.01system 0.26elapsed)
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+generating transdb.h
+transdb.h updated
+making trans
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+compiling ./enc/trans/transdb.c
+linking transcoder transdb.so
+compiling ./enc/trans/big5.c
+linking transcoder big5.so
+compiling ./enc/trans/chinese.c
+linking transcoder chinese.so
+compiling ./enc/trans/emoji.c
+linking transcoder emoji.so
+compiling ./enc/trans/emoji_iso2022_kddi.c
+linking transcoder emoji_iso2022_kddi.so
+compiling ./enc/trans/emoji_sjis_docomo.c
+linking transcoder emoji_sjis_docomo.so
+compiling ./enc/trans/emoji_sjis_kddi.c
+linking transcoder emoji_sjis_kddi.so
+compiling ./enc/trans/emoji_sjis_softbank.c
+linking transcoder emoji_sjis_softbank.so
+compiling ./enc/trans/escape.c
+linking transcoder escape.so
+compiling ./enc/trans/gb18030.c
+linking transcoder gb18030.so
+compiling ./enc/trans/gbk.c
+linking transcoder gbk.so
+compiling ./enc/trans/iso2022.c
+linking transcoder iso2022.so
+compiling ./enc/trans/japanese.c
+linking transcoder japanese.so
+compiling ./enc/trans/japanese_euc.c
+linking transcoder japanese_euc.so
+compiling ./enc/trans/japanese_sjis.c
+linking transcoder japanese_sjis.so
+compiling ./enc/trans/korean.c
+linking transcoder korean.so
+compiling ./enc/trans/single_byte.c
+linking transcoder single_byte.so
+compiling ./enc/trans/utf8_mac.c
+linking transcoder utf8_mac.so
+compiling ./enc/trans/utf_16_32.c
+linking transcoder utf_16_32.so
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+making encs
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+./revision.h updated
+generating makefile exts.mk
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-3571
+configuring -test-/bug-3662
+configuring -test-/bug-5832
+configuring -test-/debug
+configuring -test-/exception
+configuring -test-/fatal
+configuring -test-/funcall
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/marshal/compat
+configuring -test-/marshal/usr
+configuring -test-/method
+configuring -test-/num2int
+configuring -test-/old_thread_select
+configuring -test-/path_to_class
+configuring -test-/postponed_job
+configuring -test-/printf
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/symbol
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/wait_for_single_fd
+configuring -test-/win32/dln
+Failed to configure -test-/win32/dln. It will not be installed.
+configuring -test-/win32/fd_setsize
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+configuring bigdecimal
+configuring continuation
+configuring coverage
+configuring curses
+Failed to configure curses. It will not be installed.
+configuring date
+configuring dbm
+Failed to configure dbm. It will not be installed.
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+configuring digest/rmd160
+configuring digest/sha1
+configuring digest/sha2
+configuring dl
+configuring dl/callback
+configuring dl/win32
+Failed to configure dl/win32. It will not be installed.
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+ffi.h is missing. Please install libffi.
+Failed to configure fiddle. It will not be installed.
+configuring fiddle/win32
+Failed to configure fiddle/win32. It will not be installed.
+configuring gdbm
+Failed to configure gdbm. It will not be installed.
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring mathn/complex
+configuring mathn/rational
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring readline
+readline nor libedit not found
+Failed to configure readline. It will not be installed.
+configuring ripper
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring tk
+...........
+check struct members..
+check libraries....
+Use ActiveTcl libraries (if available).
+Search tclConfig.sh and tkConfig.sh..............................
+Fail to find [tclConfig.sh, tkConfig.sh]
+Use X11 libraries (or use TK_XINCLUDES/TK_XLIBSW information on tkConfig.sh).
+Warning:: cannot find X11 library. tcltklib will not be compiled (tcltklib is disabled on your Ruby. That is, Ruby/Tk will not work). Please check configure options. If your Tcl/Tk don't require X11, please try --without-X11.
+Can't find X11 libraries. 
+So, can't make tcltklib.so which is required by Ruby/Tk.
+Failed to configure tk. It will not be installed.
+configuring tk/tkutil
+Failed to configure tk/tkutil. It will not be installed.
+configuring win32ole
+Failed to configure win32ole. It will not be installed.
+configuring zlib
+make[1]: Entering directory `/home/takano32/workspace/ruby'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/array/resize'
+compiling resize.c
+linking shared-object -test-/array/resize.so
+installing default resize libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/array/resize'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bignum'
+compiling bigzero.c
+compiling init.c
+compiling export.c
+compiling import.c
+linking shared-object -test-/bignum.so
+installing default bignum libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bignum'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-3571'
+compiling bug.c
+linking shared-object -test-/bug-3571/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-3571'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-3662'
+compiling bug.c
+linking shared-object -test-/bug-3662/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-3662'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/bug-5832'
+compiling bug.c
+linking shared-object -test-/bug-5832/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/bug-5832'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/debug'
+compiling init.c
+compiling inspector.c
+linking shared-object -test-/debug.so
+installing default debug libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/debug'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/exception'
+compiling init.c
+compiling ensured.c
+compiling enc_raise.c
+linking shared-object -test-/exception.so
+installing default exception libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/exception'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/fatal'
+compiling rb_fatal.c
+linking shared-object -test-/fatal/rb_fatal.so
+installing default rb_fatal libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/fatal'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/funcall'
+compiling passing_block.c
+linking shared-object -test-/funcall/funcall.so
+installing default funcall libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/funcall'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/iter'
+compiling break.c
+linking shared-object -test-/iter/break.so
+installing default break libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/iter'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/load/dot.dot'
+compiling dot.dot.c
+linking shared-object -test-/load/dot.dot/dot.dot.so
+installing default dot.dot libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/load/dot.dot'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/marshal/compat'
+compiling usrcompat.c
+linking shared-object -test-/marshal/compat.so
+installing default compat libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/marshal/compat'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/marshal/usr'
+compiling usrmarshal.c
+linking shared-object -test-/marshal/usr.so
+installing default usr libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/marshal/usr'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/method'
+compiling arity.c
+compiling init.c
+linking shared-object -test-/method.so
+installing default method libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/method'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/num2int'
+compiling num2int.c
+linking shared-object -test-/num2int/num2int.so
+installing default num2int libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/num2int'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/old_thread_select'
+compiling old_thread_select.c
+linking shared-object -test-/old_thread_select/old_thread_select.so
+installing default old_thread_select libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/old_thread_select'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/path_to_class'
+compiling path_to_class.c
+linking shared-object -test-/path_to_class/path_to_class.so
+installing default path_to_class libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/path_to_class'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/postponed_job'
+compiling postponed_job.c
+linking shared-object -test-/postponed_job.so
+installing default postponed_job libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/postponed_job'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/printf'
+compiling printf.c
+linking shared-object -test-/printf.so
+installing default printf libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/printf'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/st/numhash'
+compiling numhash.c
+linking shared-object -test-/st/numhash.so
+installing default numhash libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/st/numhash'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/st/update'
+compiling update.c
+linking shared-object -test-/st/update.so
+installing default update libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/st/update'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/string'
+compiling qsort.c
+compiling set_len.c
+compiling cstr.c
+compiling ellipsize.c
+compiling enc_associate.c
+compiling enc_str_buf_cat.c
+compiling init.c
+compiling coderange.c
+compiling modify.c
+linking shared-object -test-/string/string.so
+installing default string libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/string'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/symbol'
+compiling intern.c
+compiling init.c
+linking shared-object -test-/symbol/symbol.so
+installing default symbol libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/symbol'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/tracepoint'
+compiling tracepoint.c
+linking shared-object -test-/tracepoint.so
+installing default tracepoint libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/tracepoint'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/typeddata'
+compiling typeddata.c
+linking shared-object -test-/typeddata/typeddata.so
+installing default typeddata libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/typeddata'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/wait_for_single_fd'
+compiling wait_for_single_fd.c
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.so
+installing default wait_for_single_fd libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/wait_for_single_fd'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/win32/dln'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/win32/dln'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/-test-/win32/fd_setsize'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/-test-/win32/fd_setsize'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/bigdecimal'
+compiling bigdecimal.c
+linking shared-object bigdecimal.so
+installing default bigdecimal libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/bigdecimal'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/continuation'
+compiling continuation.c
+linking shared-object continuation.so
+installing default continuation libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/continuation'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/coverage'
+compiling coverage.c
+linking shared-object coverage.so
+installing default coverage libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/coverage'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/curses'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/curses'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/date'
+compiling date_strptime.c
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+linking shared-object date_core.so
+installing default date_core libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/date'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dbm'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest'
+compiling digest.c
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/bubblebabble'
+compiling bubblebabble.c
+linking shared-object digest/bubblebabble.so
+installing default bubblebabble libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/bubblebabble'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/md5'
+compiling md5init.c
+linking shared-object digest/md5.so
+installing default md5 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/md5'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/rmd160'
+compiling rmd160init.c
+compiling rmd160.c
+linking shared-object digest/rmd160.so
+installing default rmd160 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/rmd160'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/sha1'
+compiling sha1init.c
+compiling sha1ossl.c
+linking shared-object digest/sha1.so
+installing default sha1 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/sha1'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/digest/sha2'
+compiling sha2init.c
+compiling sha2ossl.c
+linking shared-object digest/sha2.so
+installing default sha2 libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/digest/sha2'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl'
+compiling cptr.c
+compiling handle.c
+compiling cfunc.c
+compiling dl.c
+linking shared-object dl.so
+installing dl libraries
+installing default dl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl/callback'
+compiling callback.c
+compiling callback-0.c
+compiling callback-1.c
+compiling callback-2.c
+compiling callback-3.c
+compiling callback-4.c
+compiling callback-5.c
+compiling callback-6.c
+compiling callback-7.c
+compiling callback-8.c
+linking shared-object dl/callback.so
+installing default callback libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl/callback'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/dl/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/dl/win32'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/etc'
+compiling etc.c
+linking shared-object etc.so
+installing default etc libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/etc'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fcntl'
+compiling fcntl.c
+linking shared-object fcntl.so
+installing default fcntl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fcntl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiber'
+compiling fiber.c
+linking shared-object fiber.so
+installing default fiber libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiber'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiddle'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiddle'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/fiddle/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/fiddle/win32'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/gdbm'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/gdbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/console'
+compiling console.c
+linking shared-object io/console.so
+installing default console libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/console'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/nonblock'
+compiling nonblock.c
+linking shared-object io/nonblock.so
+installing default nonblock libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/nonblock'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/io/wait'
+compiling wait.c
+linking shared-object io/wait.so
+installing default wait libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/io/wait'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json'
+installing default libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json/generator'
+compiling generator.c
+linking shared-object json/ext/generator.so
+installing default generator libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json/generator'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/json/parser'
+compiling parser.c
+linking shared-object json/ext/parser.so
+installing default parser libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/json/parser'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/mathn/complex'
+compiling complex.c
+linking shared-object mathn/complex.so
+installing default complex libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/mathn/complex'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/mathn/rational'
+compiling rational.c
+linking shared-object mathn/rational.so
+installing default rational libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/mathn/rational'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/nkf'
+compiling nkf.c
+linking shared-object nkf.so
+installing default nkf libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/nkf'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/objspace'
+compiling objspace.c
+compiling object_tracing.c
+linking shared-object objspace.so
+installing default objspace libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/objspace'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/openssl'
+compiling ossl_bn.c
+compiling ossl_ssl.c
+compiling ossl_asn1.c
+compiling ossl_pkcs12.c
+compiling ossl_x509.c
+compiling ossl_x509name.c
+compiling ossl_pkey.c
+compiling openssl_missing.c
+compiling ossl_x509req.c
+compiling ossl_pkey_ec.c
+compiling ossl.c
+compiling ossl_x509store.c
+compiling ossl_x509cert.c
+compiling ossl_rand.c
+compiling ossl_pkey_dsa.c
+compiling ossl_x509attr.c
+compiling ossl_ssl_session.c
+compiling ossl_ocsp.c
+compiling ossl_engine.c
+compiling ossl_config.c
+compiling ossl_ns_spki.c
+compiling ossl_x509crl.c
+compiling ossl_hmac.c
+compiling ossl_bio.c
+compiling ossl_cipher.c
+compiling ossl_pkey_rsa.c
+compiling ossl_digest.c
+compiling ossl_pkey_dh.c
+compiling ossl_pkcs5.c
+compiling ossl_x509revoked.c
+compiling ossl_x509ext.c
+compiling ossl_pkcs7.c
+linking shared-object openssl.so
+installing default openssl libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/openssl'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/pathname'
+compiling pathname.c
+linking shared-object pathname.so
+installing default pathname libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/pathname'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/psych'
+compiling psych_parser.c
+compiling psych_emitter.c
+compiling psych.c
+compiling psych_yaml_tree.c
+compiling psych_to_ruby.c
+compiling ../.././ext/psych/yaml/reader.c
+compiling ../.././ext/psych/yaml/loader.c
+compiling ../.././ext/psych/yaml/api.c
+../.././ext/psych/yaml/api.c: In function 'yaml_document_delete':
+../.././ext/psych/yaml/api.c:1121:7: warning: variable 'context' set but not used [-Wunused-but-set-variable]
+compiling ../.././ext/psych/yaml/emitter.c
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_plain_scalar':
+../.././ext/psych/yaml/emitter.c:1931:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:1931:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_single_quoted_scalar':
+../.././ext/psych/yaml/emitter.c:1992:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:1992:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_literal_scalar':
+../.././ext/psych/yaml/emitter.c:2255:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:2255:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c: In function 'yaml_emitter_write_folded_scalar':
+../.././ext/psych/yaml/emitter.c:2304:18: warning: value computed is not used [-Wunused-value]
+../.././ext/psych/yaml/emitter.c:2304:18: warning: value computed is not used [-Wunused-value]
+compiling ../.././ext/psych/yaml/scanner.c
+../.././ext/psych/yaml/scanner.c: In function 'yaml_parser_decrease_flow_level':
+../.././ext/psych/yaml/scanner.c:1191:23: warning: variable 'dummy_key' set but not used [-Wunused-but-set-variable]
+compiling ../.././ext/psych/yaml/dumper.c
+compiling ../.././ext/psych/yaml/parser.c
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_block_sequence_entry':
+../.././ext/psych/yaml/parser.c:762:21: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_block_mapping_key':
+../.././ext/psych/yaml/parser.c:872:21: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_flow_sequence_entry':
+../.././ext/psych/yaml/parser.c:955:17: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+../.././ext/psych/yaml/parser.c: In function 'yaml_parser_parse_flow_mapping_key':
+../.././ext/psych/yaml/parser.c:1107:17: warning: variable 'dummy_mark' set but not used [-Wunused-but-set-variable]
+compiling ../.././ext/psych/yaml/writer.c
+linking shared-object psych.so
+installing default psych libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/psych'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/pty'
+compiling pty.c
+linking shared-object pty.so
+installing default pty libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/pty'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/racc/cparse'
+compiling cparse.c
+linking shared-object racc/cparse.so
+installing default cparse libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/racc/cparse'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/readline'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/readline'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/ripper'
+extracting ripper.y from ../.././parse.y
+compiling compiler ripper.y
+generating eventids1.c from ../.././parse.y
+compiling ripper.c
+linking shared-object ripper.so
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/ripper'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/sdbm'
+compiling init.c
+compiling _sdbm.c
+linking shared-object sdbm.so
+installing default sdbm libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/sdbm'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/socket'
+compiling init.c
+compiling constants.c
+compiling basicsocket.c
+compiling socket.c
+compiling ipsocket.c
+compiling tcpsocket.c
+compiling tcpserver.c
+compiling sockssocket.c
+compiling udpsocket.c
+compiling unixsocket.c
+compiling unixserver.c
+compiling option.c
+compiling ancdata.c
+compiling raddrinfo.c
+compiling ifaddr.c
+linking shared-object socket.so
+installing default socket libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/socket'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/stringio'
+compiling stringio.c
+linking shared-object stringio.so
+installing default stringio libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/stringio'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/strscan'
+compiling strscan.c
+linking shared-object strscan.so
+installing default strscan libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/strscan'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/syslog'
+compiling syslog.c
+linking shared-object syslog.so
+installing default syslog libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/syslog'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/tk'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/tk'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/tk/tkutil'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/tk/tkutil'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/win32ole'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/win32ole'
+make[2]: Entering directory `/home/takano32/workspace/ruby/ext/zlib'
+compiling zlib.c
+linking shared-object zlib.so
+installing default zlib libraries
+make[2]: Leaving directory `/home/takano32/workspace/ruby/ext/zlib'
+make[2]: Entering directory `/home/takano32/workspace/ruby'
+compiling dmyloadpath.c
+compiling version.c
+linking miniruby
+rbconfig.rb unchanged
+creating verconf.h
+compiling loadpath.c
+generating prelude.c
+compiling prelude.c
+linking static-library libruby-static.a
+verifying static-library libruby-static.a
+linking ruby
+make[2]: Leaving directory `/home/takano32/workspace/ruby'
+make[1]: Leaving directory `/home/takano32/workspace/ruby'
+Generating RDoc documentation
+Parsing sources...
+  1% [ 1/51]  /home/takano32/workspace/ruby/doc/marshal.rdoc                      3% [ 2/51]  ChangeLog                                                           5% [ 3/51]  NEWS                                                                7% [ 4/51]  array.c                                                             9% [ 5/51]  bignum.c                                                           11% [ 6/51]  compile.c                                                          13% [ 7/51]  dir.c                                                              15% [ 8/51]  dln_find.c                                                         17% [ 9/51]  doc/marshal.rdoc                                                   19% [10/51]  error.c                                                            21% [11/51]  ext/bigdecimal/bigdecimal.c                                        23% [12/51]  ext/bigdecimal/lib/bigdecimal/util.rb                              25% [13/51]  ext/date/date_core.c                                               27% [14/51]  ext/objspace/objspace.c                                            29% [15/51]  ext/ripper/ripper.c                                                31% [16/51]  ext/socket/option.c                                                33% [17/51]  ext/zlib/zlib.c                                                    35% [18/51]  file.c                                                             37% [19/51]  gc.c                                                               39% [20/51]  hash.c                                                             41% [21/51]  io.c                                                               43% [22/51]  lib/cgi/cookie.rb                                                  45% [23/51]  lib/cgi/util.rb                                                    47% [24/51]  lib/erb.rb                                                         49% [25/51]  lib/fileutils.rb                                                   50% [26/51]  lib/irb/completion.rb                                              52% [27/51]  lib/net/imap.rb                                                    54% [28/51]  lib/rubygems.rb                                                    56% [29/51]  lib/rubygems/commands/cert_command.rb                              58% [30/51]  lib/rubygems/commands/list_command.rb                              60% [31/51]  lib/rubygems/defaults.rb                                           62% [32/51]  lib/rubygems/security/signer.rb                                    64% [33/51]  lib/rubygems/test_case.rb                                          66% [34/51]  lib/set.rb                                                         68% [35/51]  marshal.c                                                          70% [36/51]  math.c                                                             72% [37/51]  newline.c                                                          74% [38/51]  numeric.c                                                          76% [39/51]  object.c                                                           78% [40/51]  pack.c                                                             80% [41/51]  parse.c                                                            82% [42/51]  prelude.c                                                          84% [43/51]  process.c                                                          86% [44/51]  random.c                                                           88% [45/51]  range.c                                                            90% [46/51]  rational.c                                                         92% [47/51]  string.c                                                           94% [48/51]  vm.c                                                               96% [49/51]  vm_eval.c                                                          98% [50/51]  vm_insnhelper.c                                                   100% [51/51]  vm_method.c                                                       
+
+Generating RI format into /home/takano32/workspace/ruby/.ext/rdoc...
+
+Files:        51
+
+Classes:     118 ( 1 undocumented)
+Modules:      36 ( 5 undocumented)
+Constants:   198 (11 undocumented)
+Attributes:   26 ( 0 undocumented)
+Methods:    1957 (73 undocumented)
+
+Total:      2335 (90 undocumented)
+ 96.15% documented
+
+Elapsed: 274.1s
+
+Script done on Fri Jun  7 09:13:15 2013
